@@ -1,0 +1,20 @@
+{
+    "Python Docstring Template": {
+        "prefix": "docstring",  // The trigger word for the snippet
+        "body": [
+            "\"\"\"",
+            "Description: ",
+            "",
+            "Args:",
+            "(name) (type): Description of parameter.",
+            "",
+            "Returns:",
+            "(type): Description of the return value.",
+            "",
+            "Raises:",
+            "(ExceptionType): Description of why the exception is raised.",
+            "\"\"\""
+        ],
+        "description": "A Python docstring template"
+    }
+}
