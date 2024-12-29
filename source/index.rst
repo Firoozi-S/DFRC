@@ -21,5 +21,5 @@ documentation for details.
    mimo
    ofdm
    sim
-   system
+   dfrc
    utils

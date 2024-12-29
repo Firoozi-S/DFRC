@@ -1,17 +1,16 @@
 
-
 class _MIMO():
-    def __init__(self, 
+    def __init__(self,
                  num_bs: int,
-                 num_c: int) -> None:
+                 num_ue: int) -> None:
         
-        if num_bs <= 0 | num_c <= 0:
+        if num_bs <= 0 or num_ue <= 0:
             return
         
-        _num_bs = num_bs
-        _num_c = num_c
-
-        
+        self._num_bs = num_bs
+        self._num_ue = num_ue
         pass
 
+    def get_num_bs(self) -> int:
+        return self._num_bs
 
