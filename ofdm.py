@@ -30,17 +30,13 @@ class _OFDM():
         pass
 
     def sub_carrier_freqs(self, num_bs: int):
-        antenna_index = np.arange(0, num_bs).reshape(-1,1)
-        current_sc = np.arange(1, self._num_c + 1).reshape(1,-1)
 
-        antenna_index = np.concatenate([antenna_index]* self._num_c, axis=1)
-        current_sc = np.concatenate([current_sc]*num_bs, axis=0)
+        antenna_index = np.concatenate([np.arange(0, num_bs).reshape(-1,1)]* self._num_c,
+                                        axis=1)
+        current_sc = np.concatenate([np.arange(1, self._num_c + 1).reshape(1,-1)]*num_bs, 
+                                    axis=0)
 
         sc_freqs = self._carrier_freq + (antenna_index * self._num_c + current_sc) * self._subcarrier_interval
 
+        print(VALID_MODES['all_subcarrier'])
         return sc_freqs
-
-
-
-    
-    
